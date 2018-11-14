@@ -1,0 +1,790 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f1f1f1;
+}
+
+@font-face {
+  font-family: "BigJohn";
+  src: url(../fonts/big_john.otf);
+}
+
+@font-face {
+  font-family: "SlimJohn";
+  src: url(../fonts/slim_john.otf);
+}
+
+.BigJohn {
+  font-family: 'BigJohn', sans-serif;
+}
+
+.SlimJohn {
+  font-family: 'SlimJohn', sans-serif;
+}
+
+.Raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.SourceSansPro {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.Sura {
+  font-family: 'Sura', serif;
+}
+
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.center-gym-menu {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 23px;
+}
+
+.content-menu {
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+}
+
+.menu-back {
+  background: rgba(40, 40, 40, 0.2);
+  height: 80px;
+}
+
+.menu-back2 {
+  transition: 1s;
+  background: rgba(40, 40, 40, 0.9);
+  height: 80px;
+}
+
+.logo-menu {
+  width: auto;
+  height: 60%;
+  margin-top: 15px;
+  margin-left: 15%;
+}
+
+.first_module {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/915404-crossfit-wallpapers-2880x1800-for-android-50.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
+}
+
+.menu {
+  width: auto;
+  float: right;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-right: 200px;
+}
+
+ul.opciones {
+  height: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+ul.opciones>li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.presentation-1 {
+  text-align: left;
+  padding-top: 13%;
+  font-size: 70px;
+  /* color: #fff; */
+  text-shadow: 2px 2px rgba(20, 20, 20, 0.4);
+  /* font-weight: bold; */
+  margin-left: 15%;
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to left, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 520px;
+}
+
+.presentation-2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 50%;
+  margin-left: 15%;
+  text-align: left;
+  color: #fefefe;
+  font-size: 17px;
+}
+
+.inscribirse-btn {
+  margin-top: 15px;
+  width: 180px;
+  text-align: center;
+  margin-left: 15%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.second_module {
+  width: 100%;
+  height: auto;
+}
+
+.second_module_images {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 350px;
+}
+
+.second_module_images_div_1 {
+  background-color: rgba(85, 35, 125, 0.4);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_images_div_1:hover {
+  transition: 1.0s;
+  background-color: rgba(85, 35, 125, 0.6);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_images_div_2 {
+  background-color: rgba(215, 75, 50, 0.35);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_images_div_2:hover {
+  transition: 1.0s;
+  background-color: rgba(215, 75, 50, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_images_div_3 {
+  background-color: rgba(2, 190, 196, 0.2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_images_div_3:hover {
+  transition: 1s;
+  background-color: rgba(2, 190, 196, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_images_div_4 {
+  background-color: rgba(178, 255, 85, 0.2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_images_div_4:hover {
+  transition: 1s;
+  background-color: rgba(178, 255, 85, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.second_module_text {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 35%;
+}
+
+.third_module {
+  margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.third_module_content {
+  width: 60%;
+  margin-left: calc(50% - 30%);
+}
+
+.third_module_title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.third_module_paragraph {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.third_module_grey {
+  background: rgba(20, 20, 20, 1);
+  padding: 10px;
+  margin-top: 60px;
+  padding: 0px;
+}
+
+.third_module_services {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.third_module_sub_services {
+  color: #FEFEFE;
+  text-align: center;
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+.fourth_module {
+  width: 100%;
+  height: 400px;
+  background-image: url('../images/back_sport_food.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.style-life-title {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  padding-top: 150px;
+  font-weight: bold;
+}
+
+.style-life-title2 {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 0px;
+}
+
+.fi-m-h1 {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.fi-m-div {
+  width: 80%;
+  margin-left: calc(50% - 40%);
+  margin-top: 100px;
+}
+
+.fi-m-div-v {
+  width: 100%;
+  -webkit-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+}
+
+.fi-m-div-v2 {
+  width: 100% !important;
+  height: 100px !important;
+  background: #4CA1AF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff !important;
+  padding: 30px !important;
+  border-bottom: 5px #17a2b8 solid !important;
+}
+
+.fi-m-div-sem {
+  width: 100%;
+  -webkit-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+}
+
+.fi-m-div-sem2 {
+  width: 100% !important;
+  height: 100px !important;
+  background: #654ea3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff !important;
+  padding: 30px !important;
+  border-bottom: 5px #957bda solid !important;
+}
+
+.fi-m-div-men {
+  height: 370px;
+  margin-top: -25px;
+  width: 100%;
+  -webkit-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+}
+
+.fi-m-div-men2 {
+  width: 100% !important;
+  height: 100px !important;
+  background: #00b09b;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e4eaaf, #96c93d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e4eaaf, #96c93d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff !important;
+  padding: 30px !important;
+  border-bottom: 5px #28a745 solid !important;
+}
+
+.fi-m-div-anu {
+  width: 100%;
+  -webkit-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+  box-shadow: -4px 4px 36px -1px rgba(0, 0, 0, 0.39);
+}
+
+.fi-m-div-anu2 {
+  width: 100% !important;
+  height: 100px !important;
+  background: #FF5F6D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #fff !important;
+  padding: 30px !important;
+  border-bottom: 5px #ffc107 solid !important;
+}
+
+.third_carrousel_1 {
+  width: 200px;
+  height: 200px;
+  margin-left: calc(50% - 100px);
+  margin-top: 50px;
+}
+
+.program_training {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 5%;
+}
+
+.program_training_1 {
+  transition: 0.1s;
+  background-image: url('../images/cardio_woman.jpg');
+}
+
+.program_training_2 {
+  transition: 0.1s;
+  background-image: url('../images/fitness_gym.jpg');
+}
+
+.program_training_3 {
+  transition: 0.1s;
+  background-image: url('../images/functional_training.jpg');
+}
+
+.program_training_4 {
+  transition: 0.1s;
+  background-image: url('../images/ballet.jpg');
+}
+
+.program_training_5 {
+  transition: 0.1s;
+  background-image: url('../images/nike-min.jpg');
+}
+
+.training-list {
+  display: inline-flex;
+  list-style: none;
+  padding: 0px;
+  width: 120px;
+  margin-left: calc(50% - 80px);
+  position: absolute;
+  bottom: 0px;
+}
+
+.training-list>li {
+  margin: 5px;
+}
+
+.training-list>li:hover {
+  color: #FBBA42;
+}
+
+.fifth_module {
+  width: 100%;
+  height: 400px;
+}
+
+.sixth_module {
+  width: 100%;
+  height: 400px;
+    margin-top: 240px;
+}
+
+.footer_gym {
+  background: #202020;
+}
+
+.street-square {
+  background: #202020;
+  width: 200px;
+  color: #fff;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.f-m-div {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.5);
+}
+
+/*******************************************************************/
+
+/****************************Plataforma*****************************/
+
+/******* COLOR ******/
+
+.background-green {
+  background: #B7C014;
+}
+
+.background-green_2 {
+  background: #A4AE1D;
+}
+
+.background-blue {
+  background: #0590AD;
+}
+
+.background-red {
+  background: #D45758;
+}
+
+.background-yellow {
+  background: #FFC400;
+  color: #404040;
+}
+
+/******* /COLOR ******/
+
+.menu-superior {
+  width: 100%;
+  background-color: #43AB85;
+  display: block;
+  z-index: 30;
+  height: 140px;
+  padding: 25px;
+}
+
+.menu-lateral-izquierda {
+  width: 300px;
+  background-color: #F8F8F8;
+  height: 155vh;
+  padding-top: 25px;
+  float: left;
+}
+
+.contenedor-lateral-derecha {
+  width: calc(100% - 300px);
+  height: 155vh;
+  background-color: #f1f1f1;
+  margin-left: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
+}
+
+.title-menu-inferior {
+  font-size: 17px;
+}
+
+.panel-right-menu-inferior {
+  margin-top: -7px;
+  left: 30px;
+  width: 230px;
+  position: absolute;
+  z-index: 0;
+}
+
+.img-menu-inferior {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 25px;
+  position: absolute;
+}
+
+.name-menu-inferior {
+  color: white;
+  margin-top: 23px;
+  position: absolute;
+  left: 60px;
+  font-size: 14px;
+}
+
+.circle-menu-lateral {
+  font-size: 11px;
+  width: 22px;
+  text-align: center;
+  color: #fff;
+  padding: 3px;
+  border-radius: 50%;
+  position: absolute;
+  top: 65px;
+  margin-left: 130px;
+}
+
+.type_user {
+  position: absolute;
+  margin-top: 45px;
+  left: 55px;
+  padding-left: 5px;
+  font-size: 13px;
+  padding-right: 5px;
+  color: #fff;
+}
+
+.etiqueta {
+  color: white;
+  border-radius: 3px;
+}
+
+.img-menu-lateral-izquierda {
+  width: 120px;
+  margin-left: calc(50% - 60px);
+  border-radius: 50%;
+}
+
+.name-menu-lateral-izquierda {
+  color: #555459;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: -10px;
+}
+
+.list-menu-lateral-izquierda {
+  list-style: none;
+  color: #555459;
+  font-size: 14px;
+  margin-top: -10px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.list-menu-lateral-izquierda>li {
+  margin: 15px;
+  font-size: 15px;
+}
+
+.list-menu-lateral-izquierda>li:hover {
+  margin: 15px;
+  border-left: 3px #43AB85 solid;
+  padding-left: 10px;
+  font-size: 16px;
+  color: #43AB85;
+}
+
+.inbox-notification {
+  left: 140px;
+  color: #f1f1f1;
+  background: #F16950;
+  border-radius: 4px;
+  padding-left: 7px;
+  padding-right: 7px;
+  position: absolute;
+}
+
+.how-we-are {
+  font-weight: 500;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.white-square {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.12);
+}
+
+.table-inverse {
+  color: #fff;
+  background-color: #292b2c;
+}
+
+.content-gadget {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  "
+
+}
+
+.content-gadget-subcontent {
+  width: 100%;
+  height: 70px;
+  color: #616161;
+}
+
+.content-gadget-icon {
+  font-size: 40px;
+  bottom: 45px;
+  position: absolute;
+  left: 40px;
+}
+
+.content-gadget-b {
+  position: absolute;
+  right: 30px;
+  font-size: 40px;
+  top: 10px;
+}
+
+.content-gadget-subcontent2 {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.first-section {
+  position: absolute;
+  top: 80px;
+  width: calc(100% - 335px);
+  color: #808080;
+  z-index: 1;
+}
+
+#estadisticas>p {
+  margin: 10px;
+}
+
+#estadisticas>p>b {
+  color: #3AAB83;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fitness-img-list {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.close-session {
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  top: 26px;
+  right: 40px;
+  color: #fff;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #e9ecef;
+}
+
+.vencido {
+  background: #820333;
+  color: #fff;
+}
+
+.etiqueta-style {
+  width: 80px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.status-fine {
+  color: #A4AE1D;
+  font-weight: bold;
+  font-size: 13px;
+  padding-top: 20px !important;
+}
+
+.status-expired {
+  color: #820333;
+  font-weight: bold;
+  font-size: 13px;
+  padding-top: 20px !important;
+}
+
+#image-preview {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #ecf0f1;
+}
+
+#image-preview input {
+  line-height: 200px;
+  font-size: 200px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+
+#image-preview label {
+  /*margin-left: calc(50% - 100px);*/
+  /*margin-top: calc(50% - 100px);*/
+}
+
+#image-preview label img {
+  width: 60%;
+  border: 5px #e1e1e1 solid;
+  border-radius: 3px;
+  box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.52);
+}
+
+.text-16-blue {
+  font-size: 16px;
+  color: #3AAB83;
+}
+
+.back-not-working {
+  height: 100vh;
+  widht: 100%;
+  background-image: url('../images/back-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
