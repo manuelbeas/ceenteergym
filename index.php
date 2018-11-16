@@ -11,8 +11,19 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sura" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1533195059" />
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+
+
+
     <style>
-      #map {
+      #mapContainer {
         height: 400px;
       }
     </style>
@@ -42,7 +53,7 @@
           <p class="Raleway presentation-2">
             En el momento en que te decidas, ese es el momento correcto. Únete a la familia Center Gym y permítenos ayudarte a lograr tus sueños, a moldear tu cuerpo. No hay límites, formamos cuerpos y mentes de campeones. <br />El cambio que tanto deseas está a muy pocos clics. ¡Just do it!
           </p>
-          <a href="javascript:void(0)" class="btn btn-outline-success btn-waves inscribirse-btn">Inscribirse</a>
+          <a href="javascript:void(0)" class="btn btn-outline-success-purple btn-waves inscribirse-btn">Inscribirse</a>
         </div>
       </div>
     </div>
@@ -72,7 +83,7 @@
     </div>
     <div class="third_module">
       <div class="row third_module_content">
-        <h1 class="SlimJohn third_module_title" >Yo hago lo imposible porque lo posible lo hace cualquiera</h1>
+        <h2 class="SlimJohn third_module_title" >Yo hago lo imposible porque lo posible lo hace cualquiera</h2>
         <p class="Raleway third_module_paragraph">
           Center Gym es más que un gimnasio, somos una familia. Ofrecemos instalaciones de calidad y una atmósfera excelente, que, junto a nuestra atención personalizada y profesional por parte de nuestros entrenadores certificados, te permita construir el cuerpo que deseas y comenzar a cambiar tu vida. <br />Sé parte de nosotros. <br /><br /><b>¡Sé parte de la familia Center Gym!</b>
         </p>
@@ -83,7 +94,7 @@
           <label style="margin-left: 20px;  font-size: 13px;">Entrenador Personal</label>
         </p>
       </div>
-      <div class="third_module_grey row" style="margin-top: 100px; height: 500px; margin-left: 0px; margin-right: 0px;">
+      <div class="third_module_grey row" style="    margin-top: 180px; height: 500px; margin-left: 0px; margin-right: 0px;">
         <!--<h4 class="Raleway third_module_title" style="color: #fff;">PROGRAMAS DE ENTRENAMIENTO</h4>
         <br>-->
           <div class="col-sm-5" style="padding-top: 50px;">
@@ -172,7 +183,7 @@
           Corregidora, entre Cuauhtémoc y Rosendo G. Castro.<br>La Bienestar<br>Los Mochis, Sin.
         </p>
       </div>
-      <div id="map"></div>
+      <div id="mapContainer"></div>
     </div>
     <div class="footer_gym">
       <div class="row" style="width: 90%; margin-left: calc(50% - 45%);">
@@ -207,9 +218,42 @@
 
 
     <script>
-          navigator.geolocation.getCurrentPosition( fn_ok, fn_bad);
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+    'app_id': 'nHlLJO3nbAF5ahWDniw4',
+    'app_code': '_nEYSrmDitD0zVSxD53vLg'
+    });
 
-          function fn_bad(){
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+    document.getElementById('mapContainer'),
+    maptypes.normal.map,
+    {
+      zoom: 16,
+      center: {                     lat: 25.779831,
+                          lng: -108.985276 }
+    });
+
+
+    function addMarkersToMap(map) {
+  var centerGym = new H.map.Marker({lat:25.779831, lng:-108.985276});
+  map.addObject(centerGym);
+
+}
+
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+addMarkersToMap(map);
+
+
+  </script>
+
+          <!-- function initMap() {
             //Map options
             var options = {
                 zoom: 17,
@@ -239,80 +283,11 @@
             });
 
 
-          }
-          function fn_ok(res){
-            //Map options
-            var options = {
-                zoom: 14,
-                center: {
-                    lat: 25.779831,
-                    lng: -108.985276
-                }
-            }
-
-            var lat = res.coords.latitude;
-            var long = res.coords.longitude;
-
-            var gLatLong = new google.maps.LatLng(lat, long);
-            var gGym = new google.maps.LatLng(25.779831, -108.985276);
-            var gMapa = new google.maps.Map(document.getElementById('map'), options);
-
-            var objConfigMarker = {
-              position: gLatLong,
-              map: gMapa,
-              title: 'Usted se encuentra aquí'
-            }
-
-            var objConfigMarker2 = {
-              position: gGym,
-              map: gMapa,
-            }
-
-            var gMarkerMe = new google.maps.Marker(objConfigMarker);
-
-            var gMarkerGym = new google.maps.Marker(objConfigMarker2);
-            gMarkerGym.setIcon('icons/center_icon.png');
-            var infoWindow = new google.maps.InfoWindow({
-                 content: '<h4> Center Gym </h4>'
-             });
-            google.maps.event.addListener(gMarkerGym, 'click', function(){
-              infoWindow.open(gMapa, gMarkerGym);
-            });
-
-            var objConfigDR = {
-              map: gMapa,
-              suppressMarkers: true
-            }
-
-            var objConfigDS = {
-              origin: gLatLong,
-              destination: gGym,
-              travelMode: google.maps.TravelMode.DRIVING
-            }
-
-            var ds = new google.maps.DirectionsService();
-            var dr = new google.maps.DirectionsRenderer(objConfigDR);
-
-            ds.route(objConfigDS, fnRutear);
-
-            function fnRutear(resultados, status){
-                if(status == 'OK')
-                {
-                  dr.setDirections(resultados);
-                }
-                else {
-                  alert('Error, hubo un pedo ..' + status);
-                }
-            }
+          } -->
 
 
-          }
 
-    </script>
 
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBebsCeNBKibzoGyHZLxxrcnTtkZ8lkAbA">
-    </script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/carrousel.js"></script>
 
